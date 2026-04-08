@@ -94,7 +94,10 @@ const translations = {
     cert3: "Inglés A1 Principiantes",
     cert4: "Presente Simple & Vocabulario Común",
     cert5: "Verbo To Be",
-    cert6: "Verbos Comunes"
+    cert6: "Verbos Comunes",
+    cert7: "Introducción a MongoDB",
+    cert8: "EF Standard English Test (Level 1)",
+    cert9: "Language Market - English Course"
   },
   en: {
     nav_inicio: "Home",
@@ -187,7 +190,10 @@ const translations = {
     cert3: "English A1 Beginners",
     cert4: "Present Simple & Common Vocabulary",
     cert5: "Verb To Be",
-    cert6: "Common Verbs"
+    cert6: "Common Verbs",
+    cert7: "Introduction to MongoDB",
+    cert8: "EF Standard English Test (Level 1)",
+    cert9: "Language Market - English Course"
   }
 };
 

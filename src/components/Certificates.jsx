@@ -9,6 +9,9 @@ import cert3Img from '../assets/Certificados/Basic English Course A1.png';
 import cert4Img from '../assets/Certificados/Inglés Básico A1 Presente Simple.png';
 import cert5Img from '../assets/Certificados/Inglés Básico A1 VerboTo Be.png';
 import cert6Img from '../assets/Certificados/Ingles Básico A1 Verbos Comunes.png';
+import cert7Img from '../assets/Certificados/MongoDB.png';
+import cert8Img from '../assets/Certificados/Ef level 1.png';
+import cert9Img from '../assets/Certificados/lenguage market.png';
 
 const Certificates = () => {
   const { t } = useContext(LanguageContext);
@@ -21,6 +24,9 @@ const Certificates = () => {
     { id: 4, name: 'cert4', img: cert4Img },
     { id: 5, name: 'cert5', img: cert5Img },
     { id: 6, name: 'cert6', img: cert6Img },
+    { id: 7, name: 'cert7', img: cert7Img },
+    { id: 8, name: 'cert8', img: cert8Img },
+    { id: 9, name: 'cert9', img: cert9Img },
   ];
 
   const handleOpen = (cert) => {
@@ -46,6 +52,7 @@ const Certificates = () => {
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#certsCarousel" data-bs-slide-to="0" className="active"></button>
             <button type="button" data-bs-target="#certsCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#certsCarousel" data-bs-slide-to="2"></button>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -65,6 +72,20 @@ const Certificates = () => {
             <div className="carousel-item">
               <div className="row justify-content-center">
                 {certs.slice(3, 6).map(cert => (
+                  <div key={cert.id} className="col-10 col-md-4">
+                    <div className="cert-card" onClick={() => handleOpen(cert)}>
+                      <img src={cert.img} alt={t(cert.name)} className="cert-img" />
+                      <div className="cert-info">
+                        <p className="cert-name">{t(cert.name)}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="row justify-content-center">
+                {certs.slice(6, 9).map(cert => (
                   <div key={cert.id} className="col-10 col-md-4">
                     <div className="cert-card" onClick={() => handleOpen(cert)}>
                       <img src={cert.img} alt={t(cert.name)} className="cert-img" />
